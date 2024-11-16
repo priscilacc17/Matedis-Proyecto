@@ -6,6 +6,16 @@ ui_obj = ui
 color_scheme = colorScheme(ui_obj)
 font_scheme = fontScheme(color_scheme)
 
-def header() -> None:
-    with ui.header.style(f'display: flex; align-items: center; justify-content: space-between; width: 100%; height: 80px; background-color: {color_scheme.primary}; color: {color_scheme.text}; padding: 0 20px;'):
-        ui.label("Titulo").style(f'{font_scheme.h1} padding: 5px; text-align: center; width: 100%;')
+
+
+def header(navigation_title, left_drawer) -> None:
+    with ui.row().style('display: flex; width: 100%; background-color: #6DA34D; align-items: center;'):
+        # Bloque Izquierdo - 25% del ancho
+        with ui.row().style('flex: 0 0 285px; display: flex; align-items: center;'):
+            ui.button(on_click=lambda: left_drawer.toggle(), icon='menu').props('flat color=white')
+            ui.image('Front/static/logo.png').style('width: 31.5px; height: auto; ')
+            ui.label('MONDA').style(f'color: {color_scheme.text}; {font_scheme.h2}; margin: 0;')
+
+        # Bloque Derecho - 75% del ancho
+        with ui.row().style('flex: 1; display: flex; align-items: center; justify-content: center;'):
+            ui.label(navigation_title).style(f'color: {color_scheme.text}; {font_scheme.h2}; text-align: center; margin: 0;')

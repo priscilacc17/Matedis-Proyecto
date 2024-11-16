@@ -48,7 +48,7 @@ class fontScheme:
         self.subtitle2 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.875em', 'medium', 'white; ')
         #texto del cuerpo
         self.body1 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1em', 'normal', 'white; ')
-        self.body2 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.secondary_font, '0.875em', 'normal', 'white; ')
+        self.body2 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.875em', 'normal', '#333333; ')
         #caption y overline
         self.caption = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.75em', 'light', 'white; ')
         self.overline = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.625em', 'light', 'white; ')

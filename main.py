@@ -1,13 +1,9 @@
 from nicegui import ui
 from Front.components import theme
-from Front.components import header
 from Front.pages import home
+from Front.components import all_pages
+ui.add_head_html('Front/estilos/global.css')
 
-
-@ui.page('/')
-def index() -> None:
-        with theme.frame('Home'):
-                home.content()
-                
+all_pages.create()
 
 ui.run()
