@@ -28,7 +28,7 @@ class colorScheme:
     def __init__(self, ui):
         """Construye los elementos necesarios para los colores de los objetos."""
         self.primary = "#FFC107"
-        self.secondary = "#FFC107"
+        self.secondary = "#4CAF50"
         self.success = "#4CAF50"
         self.danger = "#F44336"
         self.warning = "#FFC107"

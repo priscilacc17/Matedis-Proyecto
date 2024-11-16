@@ -36,23 +36,19 @@ class fontScheme:
     def __init__(self,color_scheme):
         self.primary_font = 'Roboto'
         self.secondary_font = 'serif'
-        
         #headers
-        self.h1 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '2em', 'bold', color_scheme['white'])
-        self.h2 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1.5em', 'bold', color_scheme['white'])
-        self.h3 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1.17em', 'bold', color_scheme['white'])
-        self.h4 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1em', 'bold', color_scheme['white'])
-        self.h5 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.875em', 'bold', color_scheme['white'])
-        self.h6 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.75em', 'bold', color_scheme['white'])
-        
+        self.h1 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '2em', 'bold',  'white; ')
+        self.h2 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1.5em', 'bold', 'white; ')
+        self.h3 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1.17em', 'bold', 'white; ')
+        self.h4 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1em', 'bold', 'white; ')
+        self.h5 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.875em', 'bold', 'white; ')
+        self.h6 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.75em', 'bold', 'white; ')
         #subtitulos
-        self.subtitle1 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1em', 'medium', color_scheme['white'])
-        self.subtitle2 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.875em', 'medium', color_scheme['white'])
-        
+        self.subtitle1 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1em', 'medium', 'white; ')
+        self.subtitle2 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.875em', 'medium', 'white; ')
         #texto del cuerpo
-        self.body1 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1em', 'normal', color_scheme['white'])
-        self.body2 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.secondary_font, '0.875em', 'normal', color_scheme['white'])
-        
+        self.body1 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1em', 'normal', 'white; ')
+        self.body2 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.secondary_font, '0.875em', 'normal', 'white; ')
         #caption y overline
-        self.caption = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.75em', 'light', color_scheme['white'])
-        self.overline = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.625em', 'light', color_scheme['white'])
+        self.caption = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.75em', 'light', 'white; ')
+        self.overline = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '0.625em', 'light', 'white; ')

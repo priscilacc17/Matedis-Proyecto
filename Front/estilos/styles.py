@@ -3,7 +3,7 @@ from colors import colorScheme
 from fonts import fontScheme
 
 ui_obj = ui
-color_scheme = colorScheme()
+color_scheme = colorScheme(ui_obj)
 font_scheme = fontScheme(color_scheme)
 
 head_style = """
