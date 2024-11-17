@@ -1,6 +1,6 @@
 from nicegui import ui, app
 from Front.components import theme
-from Front.pages import registro_animales, registro_usuarios, ubicacion
+from Front.pages import registro_animales, registro_usuarios, ubicacion, home
 
 def create():
     @ui.page('/dashboard')
@@ -11,7 +11,9 @@ def create():
 
         with theme.frame('Dashboard'):
             ui.label('Bienvenido al Dashboard de Agropecuaria').classes('text-lg')
-
+    @ui.page('/')
+    def index() -> None:
+            home.content()
     @ui.page('/ubicacion/')
     def ubication() -> None:
         if not app.storage.user.get('authenticated', False):
