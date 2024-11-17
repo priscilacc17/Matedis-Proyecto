@@ -1,21 +1,28 @@
-"""Libreria para crear una interfaz de usuario (GUI) en Python."""
-from nicegui import ui
+from nicegui import ui, app
+from fastapi.responses import RedirectResponse
+from Front.components import theme
 
-"""Libreria para estilos de botones."""
-from Front.estilos.styles import button_style
+def setup_login():
+    @ui.page('/login')
+    def login():
+        if app.storage.user.get('authenticated', False):
+            return RedirectResponse('/dashboard')
 
-def verificar_usuario(user, password):
-    """Verificacion del usuario
-    Args:
-        user (str): correo electronico
-        password (str): contraseña
-    """
-    if user == 'admin' and password == 'admin':
-        ui.notify("Inicio de sesión exitoso.")
-    else:
-        ui.notify('Inicio de sesión fallido.')
+        def try_login():
+            if email.value == "user@example.com" and password.value == "password":
+                app.storage.user.update({'username': email.value, 'authenticated': True})
+                ui.navigate.to(app.storage.user.get('referrer_path', '/dashboard'))  # CORRECCIÓN: cambiar ui.navigate() a ui.navigate.to()
+            else:
+                ui.notify('Credenciales incorrectas', color='negative')
 
-def login():
-    user = ui.input(label = 'Usuario', placeholder='Usuario').classes('w-1/2')
-    user_password = ui.input(label = 'Contraseña', placeholder='Contraseña', password=True)
-    ui.button('Iniciar sesión', on_click = lambda: verificar_usuario(user.value, user_password.value)).classes(button_style())
+        with theme.frame('Bienvenido a Agropecuaria'):
+            with ui.card().classes('w-96 p-8'):
+                ui.label('Bienvenido a Agropecuaria!').classes('text-2xl font-bold text-center mb-4')
+                email = ui.input('Correo Electrónico').props('type=email')
+                password = ui.input('Contraseña').props('type=password password-icon')
+                ui.button('Entrar', on_click=try_login).props('color=primary').classes('mt-5 w-full')
+                
+    @ui.page('/logout')
+    def logout():
+        app.storage.user.clear()
+        ui.navigate.to('/login')

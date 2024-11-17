@@ -6,8 +6,6 @@ ui_obj = ui
 color_scheme = colorScheme(ui_obj)
 font_scheme = fontScheme(color_scheme)
 
-
-
 def header(navigation_title, left_drawer) -> None:
     with ui.row().style('display: flex; width: 100%; background-color: #6DA34D; align-items: center;'):
         # Bloque Izquierdo - 25% del ancho
@@ -19,3 +17,4 @@ def header(navigation_title, left_drawer) -> None:
         # Bloque Derecho - 75% del ancho
         with ui.row().style('flex: 1; display: flex; align-items: center; justify-content: center;'):
             ui.label(navigation_title).style(f'color: {color_scheme.text}; {font_scheme.h2}; text-align: center; margin: 0;')
+            ui.button('Cerrar Sesión', on_click=lambda: ui.navigate.to('/logout')).props('color=negative').classes('mr-4').style('text-align: right;')
