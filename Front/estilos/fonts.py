@@ -38,7 +38,7 @@ class fontScheme:
         self.secondary_font = 'serif'
         #home
         self.title = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '2em', 'bold',  '#4B4B4B; ')
-        self.tab = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1em', 'bold', '#4B4B4B; ')
+        self.tab = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1em', 'bold', '#F2C94C; ')
         #headers
         self.h1 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '2em', 'bold',  'white; ')
         self.h2 = "font-family: {}; font-size: {}; font-weight: {}; color: {};".format(self.primary_font, '1.5em', 'bold', 'white; ')

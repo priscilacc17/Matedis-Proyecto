@@ -1,6 +1,6 @@
 from nicegui import ui, app
 import os
-from Front.components import theme, all_pages, login
+from Front.components import all_pages, login
 from Front.pages import home
 from Front.components.user import AuthMiddleware
 
